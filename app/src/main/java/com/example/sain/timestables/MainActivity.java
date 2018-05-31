@@ -15,10 +15,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        updateListView(0);
-
         SeekBar seekBar = findViewById(R.id.seekBar);
-        seekBar.setMax(19);
+
+        updateListView(seekBar.getProgress());
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
